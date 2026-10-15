@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NO_BURBUJA.COM | Pop It</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800;900&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body class="pagina">
+
+  <header class="encabezado" id="encabezado">
+    <div class="encabezado__contenedor">
+      <a class="encabezado__logo" href="#portada">NO_BURBUJA.COM</a>
+
+      <button class="boton-menu" id="boton-menu" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-navegacion">
+        <span class="boton-menu__linea"></span>
+        <span class="boton-menu__linea"></span>
+        <span class="boton-menu__linea"></span>
+      </button>
+
+      <nav class="navegacion" id="menu-navegacion">
+        <ul class="navegacion__lista">
+          <li class="navegacion__elemento"><a class="navegacion__enlace" href="#acerca">NOSOTROS</a></li>
+          <li class="navegacion__elemento"><a class="navegacion__enlace" href="#catalogo">DESCUENTOS</a></li>
+          <li class="navegacion__elemento"><a class="navegacion__enlace" href="#pie">CONTACTO</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="portada" id="portada">
+    <div class="portada__contenido">
+      <h1 class="portada__titulo">POP IT!</h1>
+      <p class="portada__subtitulo">El mejor juguete antiestrés: ¡plástico de burbujas infinito!</p>
+      <a class="boton boton--portada" id="boton-portada" href="#catalogo">COMPRAR</a>
+    </div>
+  </section>
+
+  <main>
+    <section class="acerca" id="acerca">
+      <h2 class="titulo">¿Qué es un Pop it?</h2>
+      <p class="acerca__texto">
+        Pop it se traduce literalmente como «explótalo». Es un juego infantil cuyo proceso se parece a reventar el plástico de burbujas de embalaje. Pero, a diferencia del plástico, los pop its se pueden presionar «infinitamente», con sensaciones y sonidos característicos: las decenas de burbujas de silicona simplemente se hunden hacia el otro lado.
+      </p>
+    </section>
+
+    <section class="catalogo" id="catalogo">
+      <h2 class="titulo">¡Elige tu Pop-It!</h2>
+      <div class="carrusel" id="carrusel" role="region" aria-roledescription="carrusel" aria-label="Pop It disponibles">
+        <button class="carrusel__boton carrusel__boton--anterior" type="button" aria-label="Producto anterior">&#10094;</button>
+        <div class="carrusel__ventana">
+          <div class="carrusel__pista">
+            <article class="producto carrusel__diapositiva">
+              <img class="producto__imagen" src="images/square.png" alt="Pop It cuadrado multicolor">
+              <h3 class="producto__nombre">Cuadrado multicolor</h3>
+              <a class="boton boton--producto" href="#">COMPRAR</a>
+            </article>
+
+            <article class="producto carrusel__diapositiva">
+              <img class="producto__imagen" src="images/amongus.png" alt="Pop It de Among Us jaspeado">
+              <h3 class="producto__nombre">Among Us, jaspeado</h3>
+              <a class="boton boton--producto" href="#">COMPRAR</a>
+            </article>
+
+            <article class="producto carrusel__diapositiva">
+              <img class="producto__imagen" src="images/round.png" alt="Pop It redondo multicolor">
+              <h3 class="producto__nombre">Redondo multicolor</h3>
+              <a class="boton boton--producto" href="#">COMPRAR</a>
+            </article>
+          </div>
+        </div>
+        <button class="carrusel__boton carrusel__boton--siguiente" type="button" aria-label="Producto siguiente">&#10095;</button>
+        <div class="carrusel__puntos" role="group" aria-label="Elegir producto"></div>
+        <p class="carrusel__estado" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <section class="reglas" id="reglas">
+      <div class="reglas__contenedor">
+        <div class="reglas__contenido">
+          <h2 class="titulo titulo--izquierda">Reglas del juego</h2>
+          <p class="reglas__texto">
+            Los jugadores van por turnos presionando las burbujas. Es obligatorio terminar la fila que se empezó. Se pueden presionar como máximo 3 burbujas a la vez (deben estar juntas: no se pueden presionar varias burbujas que no estén pegadas entre sí). El objetivo es lograr que el rival juegue el último. ¡Quien juegue último pierde!
+          </p>
+        </div>
+        <img class="reglas__foto" src="images/photo.jpg" alt="Una mano presiona las burbujas de un Pop It">
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie" id="pie">
+    <div class="pie__contenedor">
+      <a class="pie__logo" href="#portada">NO_BURBUJA.COM</a>
+      <a class="pie__enlace" href="#">Métodos de pago</a>
+      <a class="pie__enlace" href="#">Envíos</a>
+      <a class="pie__enlace" href="#">Mayoristas</a>
+      <a class="pie__enlace" href="#">Contacto</a>
+    </div>
+  </footer>
+
+  <dialog class="aviso-compra" id="aviso-compra" aria-labelledby="aviso-compra__titulo" aria-describedby="aviso-compra__texto">
+    <div class="aviso-compra__contenido">
+      <button class="aviso-compra__cerrar" id="cerrar-aviso-compra" type="button" aria-label="Cerrar aviso">&times;</button>
+      <h2 class="aviso-compra__titulo" id="aviso-compra__titulo">Producto no disponible</h2>
+      <p class="aviso-compra__texto" id="aviso-compra__texto">Esta es una prueba.</p>
+      <button class="boton aviso-compra__boton" id="aceptar-aviso-compra" type="button">Deley</button>
+    </div>
+  </dialog>
+
+</body>
+</html>
